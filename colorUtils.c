@@ -28,12 +28,15 @@ int toGreyScaleLuminosity(int R, int G, int B){
 
 }
 // make three function toSepia(Red, Green, Blue)
-int toSepiaRed(){
+int toSepiaRed()
+{
 
 }
-int toSepiaGreen(){
+int toSepiaGreen()
+{
 
 }
-int toSepiaBlue(){
+int toSepiaBlue()
+{
   
 }
