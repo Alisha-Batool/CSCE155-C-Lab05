@@ -25,7 +25,7 @@ int toGrayScaleAverage(int r, int g, int b) {
 }
 
 //make tograyscalelightness function
-int toGreyScaleLightness(int r, int g, int b)
+int toGrayScaleLightness(int r, int g, int b)
 {   
    // int greyScale= (max(r,g,b) + min(r,g,b)) / 2;  
     //return greyScale; 
@@ -33,7 +33,7 @@ int toGreyScaleLightness(int r, int g, int b)
 }
 
 //make tograyscaleluminosity function
-int toGreyScaleLuminosity(int r, int g, int b)
+int toGrayScaleLuminosity(int r, int g, int b)
 {
   //int greyScale= (0.21*r + 0.72*g + 0.07*b);
   //return greyScale;
