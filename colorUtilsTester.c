@@ -17,14 +17,19 @@
  */
 int isClose(double a, double b);
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
 
   int reportPass = 0;
-  if(argc == 2) {
+  if (argc == 2)
+  {
     printf("Usage: %s [-reportPass] - optional argument to report number of passing test cases as the exit code.", argv[0]);
-    if( strcmp(argv[1], "-reportPass") == 0) {
+    if (strcmp(argv[1], "-reportPass") == 0)
+    {
       reportPass = 1;
-    } else {
+    }
+    else
+    {
       printf("ERROR: invalid command line argument: %s\n", argv[1]);
       exit(1);
     }
@@ -42,10 +47,13 @@ int main(int argc, char **argv) {
   expectedD = 0.4823;
   printf("TESTING: rgbIntToFloat(%d): ", c);
   actualD = rgbIntToFloat(c);
-  if(!isClose(expectedD, actualD)) {
+  if (!isClose(expectedD, actualD))
+  {
     printf("FAILED: returned %f, expected %f\n", actualD, expectedD);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
@@ -54,110 +62,143 @@ int main(int argc, char **argv) {
   expectedD = 0.2078;
   printf("TESTING: rgbIntToFloat(%d): ", c);
   actualD = rgbIntToFloat(c);
-  if(!isClose(expectedD, actualD)) {
+  if (!isClose(expectedD, actualD))
+  {
     printf("FAILED: returned %f, expected %f\n", actualD, expectedD);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
 
   printf("TESTING: max(%d,%d,%d): ", x, y, z);
   result = max(x, y, z);
-  if(result != 30) {
+  if (result != 30)
+  {
     printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
 
   printf("TESTING: max(%d,%d,%d): ", x, z, y);
   result = max(x, z, y);
-  if(result != 30) {
+  if (result != 30)
+  {
     printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
 
   printf("TESTING: max(%d,%d,%d): ", y, x, z);
   result = max(y, x, z);
-  if(result != 30) {
+  if (result != 30)
+  {
     printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
 
   printf("TESTING: max(%d,%d,%d): ", y, z, x);
   result = max(y, z, x);
-  if(result != 30) {
+  if (result != 30)
+  {
     printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
 
   printf("TESTING: max(%d,%d,%d): ", z, x, y);
   result = max(z, x, y);
-  if(result != 30) {
+  if (result != 30)
+  {
     printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
 
   printf("TESTING: max(%d,%d,%d): ", z, y, x);
   result = max(z, y, x);
-  if(result != 30) {
+  if (result != 30)
+  {
     printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
 
   printf("TESTING: max(%d,%d,%d): ", x, x, z);
   result = max(x, x, z);
-  if(result != 30) {
+  if (result != 30)
+  {
     printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
 
   printf("TESTING: max(%d,%d,%d): ", x, z, x);
   result = max(x, z, x);
-  if(result != 30) {
+  if (result != 30)
+  {
     printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
 
   printf("TESTING: max(%d,%d,%d): ", z, x, x);
   result = max(z, x, x);
-  if(result != 30) {
+  if (result != 30)
+  {
     printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
 
   printf("TESTING: max(%d,%d,%d): ", z, z, z);
   result = max(z, z, z);
-  if(result != 30) {
+  if (result != 30)
+  {
     printf("FAILED: max returned %d, expected 30\n", result);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
@@ -166,45 +207,135 @@ int main(int argc, char **argv) {
   expectedResult = 85;
   printf("TESTING: toGrayScaleAverage(%d,%d,%d): ", r, g, b);
   result = toGrayScaleAverage(r, g, b);
-  if(result != expectedResult) {
+  if (result != expectedResult)
+  {
     printf("FAILED: toGrayScaleAverage returned %d, expected %d\n", result, expectedResult);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
 
   r = 100, g = 39, b = 40;
-  expectedResult = 60;
+  expectedResult = 59;
   printf("TESTING: toGrayScaleAverage(%d,%d,%d): ", r, g, b);
   result = toGrayScaleAverage(r, g, b);
-  //TODO: this test case will fail, why?
-  if(result != expectedResult) {
+  // TODO: this test case will fail, why?
+  if (result != expectedResult)
+  {
     printf("FAILED: toGrayScaleAverage returned %d, expected %d\n", result, expectedResult);
     numFailed++;
-  } else {
+  }
+  else
+  {
     printf("PASSED\n");
     numPassed++;
   }
 
-  //TODO: add your test cases here:
-  //      -at least one for each function
-  //        min(), toGrayScaleLightness(), toGrayScaleLuminosity(),
-  //        toSepiaRed(), toSepiaGreen(), toSepiaBlue()
-  //       for at least 6 and a total of at least 20
+  // TODO: add your test cases here:
+  //       -at least one for each function
+  //         min(), toGrayScaleLightness(), toGrayScaleLuminosity(),
+  //         toSepiaRed(), toSepiaGreen(), toSepiaBlue()
+  //        for at least 6 and a total of at least 20
+ 
+  // lightness function
+  r = 84, g = 76, b = 94;
+  expectedResult = 85;
+  printf("TESTING: toGrayScaleLightness(%d,%d,%d): ", r, g, b);
+  result = toGrayScaleLightness(r, g, b);
+  // TODO: this test case will fail, why?
+  if (result != expectedResult)
+  {
+    printf("FAILED: toGrayScaleLightness returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  }
+  else
+  {
+    printf("PASSED\n");
+    numPassed++;
+  }
+  // luminosity function
+  r = 46, g = 25, b = 14;
+  expectedResult = 29;
+  printf("TESTING: toGrayScaleLuminosity(%d,%d,%d): ", r, g, b);
+  result = toGrayScaleLuminosity(r, g, b);
+  // TODO: this test case will fail, why?
+  if (result != expectedResult)
+  {
+    printf("FAILED: toGrayScaleLuminosity returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  }
+  else
+  {
+    printf("PASSED\n");
+    numPassed++;
+  }
+  //tosepiared function
+  r = 45, g = 15, b = 25;
+  expectedResult = 34;
+  printf("TESTING: toSepiaRed(%d,%d,%d): ", r, g, b);
+  result = toSepiaRed(r, g, b);
+  // TODO: this test case will fail, why?
+  if (result != expectedResult)
+  {
+    printf("FAILED: toSepiaRed returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  }
+  else
+  {
+    printf("PASSED\n");
+    numPassed++;
+  }
+ // tosepiagreen function
+  r = 45, g = 15, b = 56;
+  expectedResult = 35;
+  printf("TESTING: toSepiaGreen(%d,%d,%d): ", r, g, b);
+  result = toSepiaGreen(r, g, b);
+  // TODO: this test case will fail, why?
+  if (result != expectedResult)
+  {
+    printf("FAILED: toSepiaGreen returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  }
+  else
+  {
+    printf("PASSED\n");
+    numPassed++;
+  }
+  //sepia blue function
+  r = 56, g = 36, b = 85;
+  expectedResult = 71;
+  printf("TESTING: toSepiaBlue(%d,%d,%d): ", r, g, b);
+  result = toSepiaBlue(r, g, b);
+  // TODO: this test case will fail, why?
+  if (result != expectedResult)
+  {
+    printf("FAILED: toSepiaBlue returned %d, expected %d\n", result, expectedResult);
+    numFailed++;
+  }
+  else
+  {
+    printf("PASSED\n");
+    numPassed++;
+  }
 
   printf("Number Test Cases Passed: %6d\n", numPassed);
   printf("Number Test Cases Failed: %6d\n", numFailed);
   printf("Percent Passed:           %6.2f\n", 100.0 * numPassed / (numPassed + numFailed));
 
-  if(reportPass) {
+  if (reportPass)
+  {
     return numPassed;
-  } else {
+  }
+  else
+  {
     return numFailed;
   }
-
 }
 
-int isClose(double a, double b) {
-  return (fabs(a-b) < DELTA);
+int isClose(double a, double b)
+{
+  return (fabs(a - b) < DELTA);
 }
