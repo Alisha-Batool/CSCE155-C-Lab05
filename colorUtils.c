@@ -14,8 +14,8 @@ int max(int x, int y, int z) {
 //make min function
 int min(int x, int y, int z)
 {
-  int m= x < y ? y : x;
-  m = m < z ? z : m;
+  int m= x < y ? x : y;
+  m = m < z ? m :z ;
   return m;
 }
 

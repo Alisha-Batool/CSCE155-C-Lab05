@@ -239,10 +239,22 @@ int main(int argc, char **argv)
   //         min(), toGrayScaleLightness(), toGrayScaleLuminosity(),
   //         toSepiaRed(), toSepiaGreen(), toSepiaBlue()
   //        for at least 6 and a total of at least 20
- 
+  // min functionss
+  printf("TESTING: min(%d,%d,%d): ", x, y, z);
+  result = min(x, y, z);
+  if (result != 10)
+  {
+    printf("FAILED: min returned %d, expected 10\n", result);
+    numFailed++;
+  }
+  else
+  {
+    printf("PASSED\n");
+    numPassed++;
+  }
   // lightness function
-  r = 84, g = 76, b = 94;
-  expectedResult = 85;
+  r = 84, g = 76, b = 25;
+  expectedResult = 54;
   printf("TESTING: toGrayScaleLightness(%d,%d,%d): ", r, g, b);
   result = toGrayScaleLightness(r, g, b);
   // TODO: this test case will fail, why?
@@ -272,7 +284,7 @@ int main(int argc, char **argv)
     printf("PASSED\n");
     numPassed++;
   }
-  //tosepiared function
+  // tosepiared function
   r = 45, g = 15, b = 25;
   expectedResult = 34;
   printf("TESTING: toSepiaRed(%d,%d,%d): ", r, g, b);
@@ -288,9 +300,9 @@ int main(int argc, char **argv)
     printf("PASSED\n");
     numPassed++;
   }
- // tosepiagreen function
-  r = 45, g = 15, b = 56;
-  expectedResult = 35;
+  // tosepiagreen function
+  r = 45, g = 25, b = 26;
+  expectedResult = 37;
   printf("TESTING: toSepiaGreen(%d,%d,%d): ", r, g, b);
   result = toSepiaGreen(r, g, b);
   // TODO: this test case will fail, why?
@@ -304,7 +316,7 @@ int main(int argc, char **argv)
     printf("PASSED\n");
     numPassed++;
   }
-  //sepia blue function
+  // sepia blue function
   r = 56, g = 36, b = 85;
   expectedResult = 71;
   printf("TESTING: toSepiaBlue(%d,%d,%d): ", r, g, b);
