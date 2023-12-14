@@ -50,7 +50,7 @@ int toSepiaGreen(int r, int g, int b)
 {
    //int g_new= 0.349*r + 0.686*b + 0.168*b;
    //return g_new;
-   return round(0.349*r + 0.686*g + 0.168*b);
+   return round(0.349*r + 0.686 * g + 0.168*b);
 }
 int toSepiaBlue(int r, int g, int b)
 {
