@@ -300,8 +300,8 @@ int main(int argc, char **argv)
     numPassed++;
   }
   // tosepiagreen function
-  r = 45, g = 25, b = 26;
-  expectedResult = 37;
+  r = 45, g = 25, b = 34;
+  expectedResult = 39;
   printf("TESTING: toSepiaGreen(%d,%d,%d): ", r, g, b);
   result = toSepiaGreen(r, g, b);
   // TODO: this test case will fail, why?
